@@ -1,7 +1,7 @@
 "use client";
 import Header from "@/components/Header";
 import Logo from "@/assets/home/logo.png";
-import { useEffect, useState, useActionState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 const BG_IMAGE_PATH = "/media/video-poster.jpg";
 
@@ -33,7 +33,7 @@ export default function Contact() {
     setSubmitState({ ok: null, message: null });
     
     try {
-      const result = await sendContactEmail(formData);
+      await sendContactEmail(formData);
       setSubmitState({ ok: true, message: 'Message sent successfully!' });
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {

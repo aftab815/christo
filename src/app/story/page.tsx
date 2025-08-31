@@ -70,7 +70,7 @@ export default function Story() {
             
             <div className='space-y-4'>
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed'>
-                Design should hold you, not overwhelm you. My approach to design isn't rooted in trends but rather in experience, intuition, and an ongoing relationship with stillness, light, and the natural world that surrounds us.
+                Design should hold you, not overwhelm you. My approach to design isn&apos;t rooted in trends but rather in experience, intuition, and an ongoing relationship with stillness, light, and the natural world that surrounds us.
               </p>
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed'>
                 Everything I create begins with one fundamental question: <span className='italic'>How should this space make you feel?</span> That single feeling becomes the guiding principle behind every design decision, material selection, and spatial arrangement.

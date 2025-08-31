@@ -1,14 +1,16 @@
 "use client";
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
 // components
-import { HorizontalScrollContainer, HorizontalScrollContainerRef } from "@/components/shared/HorizontalScrollContainer";
+import { HorizontalScrollContainer, type HorizontalScrollContainerRef } from "@/components/shared/HorizontalScrollContainer";
 import Header from "@/components/Header";
 import ImageZoom from "@/components/shared/ImageZoom";
 
 // assets
+import BGImage from "@/assets/bg-image.jpg";
 import Logo from "@/assets/ethos/logo.png";
 import Image1 from "@/assets/projects/image1.jpeg";
 import Image2 from "@/assets/projects/image2.jpeg";
@@ -16,7 +18,9 @@ import Image3 from "@/assets/projects/image3.jpeg";
 import Image4 from "@/assets/projects/image4.jpeg";
 import Image5 from "@/assets/projects/image5.jpeg";
 import Image6 from "@/assets/projects/image6.jpeg";
-import BGImage from "@/assets/projects/background.jpg";
+import Image7 from "@/assets/projects/image7.jpeg";
+import Image8 from "@/assets/projects/image8.jpeg";
+import Image9 from "@/assets/projects/image9.jpeg";
 import MobileBG from "@/../public/media/mobile projects bg.png";
 
 // types
@@ -30,12 +34,12 @@ interface ScrollInfo {
 export default function Projects() {
   const scrollContainerRef = useRef<HorizontalScrollContainerRef>(null);
 
-  const handleScrollChange = () => {
-    // Scroll change handler for future use
-  };
-
   const scrollToStart = () => {
     scrollContainerRef.current?.resetScroll();
+  };
+
+  const handleScrollChange = () => {
+    // Scroll change handler for future use
   };
 
   return (
@@ -74,11 +78,11 @@ export default function Projects() {
             
             <div className='space-y-4'>
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed'>
-                Introducing a new model for living that goes beyond design — it's about reimagining what a home can feel like. Each project is shaped by a philosophy rooted in simplicity, natural flow, and emotional connection.
+                Introducing a new model for living that goes beyond design — it&apos;s about reimagining what a home can feel like. Each project is shaped by a philosophy rooted in simplicity, natural flow, and emotional connection.
               </p>
 
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed'>
-                Our goal is to expand a model of living that's regenerative, timeless, and deeply human. This is slow architecture — built with care, not convention.
+                A cozy cottage that&apos;s been updated with modern amenities while maintaining its original charm. Creative, timeless, and deeply human. This is slow architecture — built with care, not convention.
               </p>
             </div>
             
@@ -110,17 +114,17 @@ export default function Projects() {
             
             <div className='space-y-4'>
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed'>
-                Nestled in a field of wildflowers, The Meadow is a celebration of organic forms and natural light. The structure's gentle curves and warm wood tones create a sense of movement that mirrors the surrounding landscape.
+                A modern family home that&apos;s both functional and beautiful, with an open floor plan and large windows that bring in natural light. The structure&apos;s gentle curves and warm wood tones create a sense of movement that mirrors the surrounding landscape.
               </p>
 
               <div className='bg-[#d5d5c8]/10 p-6 rounded-lg border border-[#d5d5c8]/20'>
                 <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed italic'>
-                  "Designed for connection—to nature, to art, and to each other—this home features open, flowing spaces that encourage gathering and contemplation in equal measure."
+&ldquo;Designed for connection—to nature, to art, and to each other—this home features open, flowing spaces that encourage gathering and contemplation in equal measure.&rdquo;
                 </p>
               </div>
 
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed'>
-                Rooted in Christopher's aesthetic and philosophical influences — from Wabi-Sabi to biophilia — the design brings nature inward and emotion to the forefront. Light, material, and movement are all treated as collaborators, not afterthoughts.
+                Rooted in Christopher&apos;s aesthetic and philosophical influences — from Wabi-Sabi to biophilia — the design brings nature inward and emotion to the forefront. Light, material, and movement are all treated as collaborators, not afterthoughts.
               </p>
 
               <p className='text-[#d5d5c8] font-[300] text-base leading-relaxed'>
@@ -150,13 +154,13 @@ export default function Projects() {
             <div className='space-y-4'>
               <p className='text-[#e7e7dc] font-[300] text-base leading-relaxed text-center md:text-left'>
                 The Quarry redefines modern living with its seamless integration of natural materials and clean lines. Each
-                space is designed to enhance the connection between indoor comfort and the surrounding landscape, creating
+                A beachfront property that&apos;s been designed to take full advantage of its stunning ocean views. Between indoor comfort and the surrounding landscape, creating
                 a sanctuary that feels both luxurious and organic.
               </p>
 
               <p className='text-[#e7e7dc] font-[300] text-base leading-relaxed text-center md:text-left'>
-                Every detail, from the hand-selected stone to the custom millwork, reflects a commitment to craftsmanship
-                and sustainability. The result is a home that stands as a testament to thoughtful, intentional design.
+                A minimalist apartment that&apos;s been transformed into a serene retreat, with custom built-ins and a neutral color palette. Built with attention to craftsmanship
+                and sustainability, the result is a home that stands as a testament to thoughtful, intentional design.
               </p>
 
               <div className='pt-4'>
